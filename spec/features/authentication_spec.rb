@@ -1,11 +1,10 @@
 describe "the signin process", :type => :feature do
   before :each do
-    binding.pry
     create :user, :email => 'user@example.com', :password => 'password'
   end
 
   it "signs me in" do
-    visit '/sessions/new'
+    visit '/users/sign_in'
     within("#session") do
       fill_in 'Email', :with => 'user@example.com'
       fill_in 'Password', :with => 'password'
