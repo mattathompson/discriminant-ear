@@ -18,6 +18,8 @@ describe "the registration process", :type => :feature do
   it "signs me up" do
     visit '/users/sign_up'
     within("form") do
+      fill_in 'First name', :with => 'John'
+      fill_in 'Last name', :with => 'Snow'
       fill_in 'Email', :with => 'user@example.com'
       fill_in 'Password', :with => 'password'
       fill_in "Password confirmation", :with => "password"
