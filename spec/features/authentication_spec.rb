@@ -33,13 +33,14 @@ describe "updating user details", :type => :feature do
     login_as(user, :scope => :user)
   }
 
-  it "updates my user info" do
+  it "updates my email" do
     visit '/users/edit'
-    within("form") do
+    within("form#edit_user") do
       fill_in 'Email', :with => 'new-email@example.com'
-      fill_in 'Password', :with => 'password'
+      fill_in 'Current password', :with => 'password'
     end
+
     click_button 'Update'
-    expect(page).to have_content 'Welcome! You have signed up successfully. The Discriminant Ear'
+    expect(page).to have_content 'Your account has been updated successfully. The Discriminant Ear'
   end
 end
