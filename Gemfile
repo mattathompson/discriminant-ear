@@ -21,7 +21,11 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+# gem 'sdoc', '~> 0.4.0', group: :doc
+
+# User Authentication
+gem 'devise'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -35,12 +39,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+
 end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'pry-rails'
 end
 
 group :development do
