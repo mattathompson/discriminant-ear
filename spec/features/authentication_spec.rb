@@ -1,3 +1,13 @@
+describe "a visitor", :type => :feature do
+  it "redirects a visitor to the sign_in page" do
+    visit "/"
+    expect(current_path).to eq new_user_session_path
+  end
+end
+
+
+
+
 describe "the signin process", :type => :feature do
   before :each do
     create :user, :email => 'user@example.com', :password => 'password'
