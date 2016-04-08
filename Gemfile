@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem "omniauth-google-oauth2"
 
+# Managing ENV varriables 
+gem 'dotenv-rails', :groups => [:development, :test]
 
 
 # Use ActiveModel has_secure_password
