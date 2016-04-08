@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.0'
 
 # User Authentication
 gem 'devise'
+gem "omniauth-google-oauth2"
+
 
 
 # Use ActiveModel has_secure_password
